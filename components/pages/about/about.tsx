@@ -3,6 +3,12 @@ import Download from "@/components/icons/download";
 import Figma from "@/components/icons/figma";
 import Vsc from "@/components/icons/vsc";
 import Vs from "@/components/icons/vs";
+import Frontend from "@/components/icons/frontend";
+import Ui from "@/components/icons/ui";
+import Backend from "@/components/icons/backend";
+import Responsive from "@/components/icons/responsive";
+import Database from "@/components/icons/database";
+import Rocket from "@/components/icons/rocket";
 import Node from "@/components/icons/node";
 
 export default function about() {
@@ -30,33 +36,52 @@ export default function about() {
       </div>
 
       <hr className="border-2 border-gray-400 w-10/12" />
-      <div className="flex flex-col">
+      <div className="flex flex-col items-center justify-center">
         <h1 className="text-2xl font-semibold">My Services</h1>
-        <div className="flex flex-col mt-10">
-          <div className="flex flex-col gap-4">
-            <div className="flex justify-center items-center">
-              <div className="flex justify-center items-center"></div>
-              <span>Service 1</span>
+        <div className="flex flex-col justify-center items-center mt-10">
+          <div className="flex flex-col w-3/4 items-center justify-center gap-4">
+            <div className="flex justify-start items-center gap-3 bg-gray-300 rounded-lg py-2 px-4 h-20 w-full">
+              <div className="flex justify-center items-center w-10 shrink-0">
+                <Ui />
+              </div>
+              <span>UI/UX design using Figma</span>
             </div>
-            <div className="flex justify-center items-center">
-              <div className="flex justify-center items-center"></div>
-              <span>Service 1</span>
+
+            <div className="flex justify-start items-center gap-3 bg-gray-300 rounded-lg py-2 px-4 h-20 w-full">
+              <div className="flex justify-center items-center w-10 shrink-0">
+                <Backend />
+              </div>
+              <span>Back-end development</span>
             </div>
-            <div className="flex justify-center items-center">
-              <div className="flex justify-center items-center"></div>
-              <span>Service 1</span>
+
+            <div className="flex justify-start items-center gap-3 bg-gray-300 rounded-lg py-2 px-4 h-20 w-full">
+              <div className="flex justify-center items-center w-10 shrink-0">
+                <Responsive />
+              </div>
+              <span>
+                Responsive website <br /> design for all devices
+              </span>
             </div>
-            <div className="flex justify-center items-center">
-              <div className="flex justify-center items-center"></div>
-              <span>Service 1</span>
+
+            <div className="flex justify-start items-center gap-3 bg-gray-300 rounded-lg py-2 px-4 h-20 w-full">
+              <div className="flex justify-center items-center w-10 shrink-0">
+                <Frontend />
+              </div>
+              <span>Front-end development</span>
             </div>
-            <div className="flex justify-center items-center">
-              <div className="flex justify-center items-center"></div>
-              <span>Service 1</span>
+
+            <div className="flex justify-start items-center gap-3 bg-gray-300 rounded-lg py-2 px-4 h-20 w-full">
+              <div className="flex justify-center items-center w-10 shrink-0">
+                <Database />
+              </div>
+              <span>Custom full-stack web application development</span>
             </div>
-            <div className="flex justify-center items-center">
-              <div className="flex justify-center items-center"></div>
-              <span>Service 1</span>
+
+            <div className="flex justify-start items-center gap-3 bg-gray-300 rounded-lg py-2 px-4 h-20 w-full">
+              <div className="flex justify-center items-center w-10 shrink-0">
+                <Rocket />
+              </div>
+              <span>Website Deployment and Hosting setup</span>
             </div>
           </div>
         </div>

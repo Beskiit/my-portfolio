@@ -10,7 +10,6 @@ export default function backend({ className }: backendProps) {
       viewBox="0 0 46 46"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
       className={className}
     >
       <path fill="url(#pattern0_3_193)" d="M0 0H46V46H0z" />

@@ -1,6 +1,7 @@
 import Hero from "@/components/pages/home/hero";
 import Skills from "@/components/pages/home/skills";
 import About from "@/components/pages/about/about";
+import Education from "@/components/pages/about/education";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <Hero />
         <Skills />
         <About />
+        <Education />
       </div>
     </>
   );

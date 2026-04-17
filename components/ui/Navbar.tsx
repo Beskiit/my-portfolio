@@ -37,7 +37,7 @@ export default function Navbar() {
         </ul>
       </div>
       {isOpen && (
-        <ul className="md:hidden flex flex-col justify-center items-center px-6 pb-4 gap-4 h-full">
+        <ul className="md:hidden flex flex-col justify-center items-center gap-4 h-full">
           <li>
             <a
               className="text-black"
