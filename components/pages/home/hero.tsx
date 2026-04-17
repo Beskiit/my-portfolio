@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex flex-col items-center mt-20 gap-2 px-4 md:flex-row"
+      className="flex flex-col items-center mt-20 gap-2 px-4 md:flex-row"
     >
       <Image
         src="/images/profile.png"
@@ -72,6 +72,16 @@ export default function Hero() {
           </span>
         </span>
       </div>
+
+      <Image
+        src="/images/skills.png"
+        alt="Profile Picture"
+        width={200}
+        height={200}
+        style={{ width: "100%", height: "200" }}
+        className="mt-4"
+        loading="eager"
+      />
     </section>
   );
 }
