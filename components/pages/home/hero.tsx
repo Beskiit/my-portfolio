@@ -36,7 +36,7 @@ export default function Hero() {
         <div className="flex flex-row gap-1 items-center">
           <Location />
           <span className="text-[0.725rem] font-semibold text-black">
-            Based in Bulacan
+            Based in Bulacan, Philippines
           </span>
         </div>
         <div className="flex flex-row gap-1 items-center text-black">

@@ -10,29 +10,28 @@ import Java from "@/components/icons/java";
 
 export default function education() {
   return (
-    <section>
+    <section className="text-black">
       <div className="flex justify-center items-center">
         <h1 className="text-2xl font-semibold mt-4">Education</h1>
       </div>
       <div className="flex flex-col mt-4">
-        <div className="flex flex-row justify-end gap-2 px-2">
-          <span className="text-sm">(2022 - Present)</span>
-          <span className="text-sm">
+        <div className="flex flex-row justify-end gap-2 px-2 font-semibold">
+          <span className="text-xs">(2022 - Present)</span>
+          <span className="text-xs">
             Bachelor of Science in Information Technology
           </span>
         </div>
-        <div className="flex flex-row justify-end gap-2 px-2">
-          <span className="text-sm">STI College Balagtas</span>
+        <div className="flex flex-row justify-end gap-2 px-2 font-semibold">
+          <span className="text-xs">STI College Balagtas</span>
         </div>
-        <div className="flex flex-row justify-end gap-2 px-2 mt-4">
-          <span className="text-sm">(2015 - 2021)</span>
-          <span className="text-sm">Secondary</span>
+        <div className="flex flex-row justify-end gap-2 px-2 mt-4 font-semibold">
+          <span className="text-xs">(2015 - 2021)</span>
+          <span className="text-xs">Secondary</span>
         </div>
-        <div className="flex flex-col justify-end px-2">
-          <span className="text-sm text-end">
-            Assemblywoman Felicita G. Berdinardino Memorial Trade
+        <div className="flex flex-col justify-end px-2 font-semibold">
+          <span className="text-xs text-end">
+            Assemblywoman Felicita G. Berdinardino Memorial Trade School
           </span>
-          <span className="text-sm text-end">School</span>
         </div>
       </div>
       <div className="flex flex-col justify-center bg-gray-300 mt-10 w-full h-40 p-4 gap-4">

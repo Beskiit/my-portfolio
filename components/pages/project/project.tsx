@@ -53,60 +53,59 @@ export default function Projects() {
   );
 
   return (
-    <section id="projects">
+    <section id="projects" className="text-black">
       <div className="flex items-center justify-center py-10">
         <h2 className="text-3xl font-semibold">My Projects</h2>
       </div>
 
-      <div className="relative">
-        {allSlides.map((slide, i) => (
+      {projects.map((project, pi) => (
+        <div key={pi} className="relative">
+          {/* Description - sits right after first image visually */}
           <div
-            key={i}
-            className="sticky top-0 h-screen flex flex-col items-center justify-center px-6 gap-4"
-            style={{ zIndex: i + 1 }}
+            className="sticky top-[60vh] bg-white px-6 py-4 flex flex-col gap-2"
+            style={{ zIndex: project.images.length + 10 }}
           >
-            <div
-              className="w-full bg-white rounded-2xl p-4 shadow-md mt-10"
-              style={{ marginTop: `${i * 20}px` }}
-            >
-              {slide.isFirst && (
-                <h3 className="text-2xl font-semibold mb-2">{slide.title}</h3>
-              )}
-
-              <p className="text-xs text-gray-400 mb-2">
-                {slide.label} · {slide.current} / {slide.total}
-              </p>
-
-              <div className="w-full h-[200px] md:h-[320px] relative">
-                <Image
-                  src={slide.src}
-                  alt={slide.label}
-                  fill
-                  className="rounded-xl object-cover"
-                />
-              </div>
-
-              {slide.isFirst && (
-                <>
-                  <p className="text-gray-500 text-sm mt-2 text-center">
-                    {slide.desc}
-                  </p>
-                  <div className="flex gap-2 flex-wrap justify-center mt-2">
-                    {slide.tags.map((tag, j) => (
-                      <span
-                        key={j}
-                        className="text-sm px-3 py-1 bg-gray-200 rounded-full"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </>
-              )}
+            <h3 className="text-xl font-semibold">{project.title}</h3>
+            <p className="text-gray-500 text-sm">{project.desc}</p>
+            <div className="flex gap-2 flex-wrap">
+              {project.tags.map((tag, j) => (
+                <span
+                  key={j}
+                  className="text-sm px-3 py-1 bg-gray-200 rounded-full"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
           </div>
-        ))}
-      </div>
+
+          {/* All images stack on top of description */}
+          {project.images.map((img, ii) => (
+            <div
+              key={ii}
+              className="sticky top-0 h-[60vh] flex items-center justify-center px-6"
+              style={{ zIndex: ii + 1 }}
+            >
+              <div
+                className="w-full bg-white rounded-2xl overflow-hidden"
+                style={{ marginTop: `${ii * 16}px` }}
+              >
+                <div className="w-full h-[200px] md:h-[280px] relative">
+                  <Image
+                    src={img.src}
+                    alt={img.label}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <p className="text-xs text-gray-400 text-center py-1">
+                  {img.label} · {ii + 1} / {project.images.length}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      ))}
     </section>
   );
 }

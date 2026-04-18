@@ -10,7 +10,7 @@ export default function Navbar() {
     >
       <div className="flex flex-row justify-between px-4 py-2">
         <p></p>
-        <span className="font-bold text-lg text-black">Airone Gamil</span>
+        <span className="font-bold text-lg text-black">AIRONE GAMIL</span>
         <button
           type="button"
           className="text-black md:hidden "
