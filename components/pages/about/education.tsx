@@ -42,17 +42,17 @@ export default function education() {
         <span className="text-lg font-semibold text-end">- Waseem Latif</span>
       </div>
 
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center mt-5">
         <h1 className="text-2xl font-semibold mt-4">TECH STACK</h1>\
-        <div className="flex flex-col gap-4">
-          <div className="flex flex-row gap-4">
+        <div className="flex flex-col gap-4 my-10">
+          <div className="flex flex-row gap-10">
             <Js />
             <Java />
             <Python />
             <Tailwind />
             <ReactIcon />
           </div>
-          <div className="flex flex-row gap-4 justify-center">
+          <div className="flex flex-row gap-10 justify-center">
             <Csharp />
             <Node />
             <Sql />
