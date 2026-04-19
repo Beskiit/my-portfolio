@@ -5,7 +5,7 @@ import Database from "@/components/icons/database";
 
 export default function skills() {
   return (
-    <div className="flex flex-col items-center text-black">
+    <section id="skills" className="flex flex-col items-center text-black">
       <h1 className="text-3xl font-bold">Skills</h1>
       <span className="text-[0.725rem] mt-2">
         Core skills and technologies I use in Web Development.
@@ -36,6 +36,6 @@ export default function skills() {
           </span>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

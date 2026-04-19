@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { Link } from "react-scroll";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -13,66 +14,109 @@ export default function Navbar() {
         <span className="font-bold text-lg text-black">AIRONE GAMIL</span>
         <button
           type="button"
-          className="text-black md:hidden "
-          onClick={() => {
-            setIsOpen(!isOpen);
-          }}
+          className="text-black md:hidden"
+          onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? "✕" : "☰"}
         </button>
 
         <ul className="hidden md:flex gap-6">
           <li>
-            <a href="#hero">Home</a>
+            <Link
+              to="hero"
+              smooth={true}
+              duration={500}
+              offset={-80}
+              className="cursor-pointer"
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <a href="#skills">Skills</a>
+            <Link
+              to="about"
+              smooth={true}
+              duration={500}
+              offset={-80}
+              className="cursor-pointer"
+            >
+              About
+            </Link>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <Link
+              to="projects"
+              smooth={true}
+              duration={500}
+              offset={-80}
+              className="cursor-pointer"
+            >
+              Projects
+            </Link>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              offset={-80}
+              className="cursor-pointer"
+            >
+              Contact
+            </Link>
           </li>
         </ul>
       </div>
+
       {isOpen && (
         <ul className="md:hidden flex flex-col justify-center items-center gap-4 h-full">
           <li>
-            <a
-              className="text-black"
-              href="#hero"
+            <Link
+              to="hero"
+              smooth={true}
+              duration={500}
+              offset={-80}
+              className="cursor-pointer text-black"
               onClick={() => setIsOpen(false)}
             >
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              className="text-black"
-              href="#skills"
+            <Link
+              to="about"
+              smooth={true}
+              duration={500}
+              offset={-80}
+              className="cursor-pointer text-black"
               onClick={() => setIsOpen(false)}
             >
-              Skills
-            </a>
+              About
+            </Link>
           </li>
           <li>
-            <a
-              className="text-black"
-              href="#projects"
+            <Link
+              to="projects"
+              smooth={true}
+              duration={500}
+              offset={-80}
+              className="cursor-pointer text-black"
               onClick={() => setIsOpen(false)}
             >
               Projects
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              className="text-black"
-              href="#contact"
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              offset={-80}
+              className="cursor-pointer text-black"
               onClick={() => setIsOpen(false)}
             >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       )}

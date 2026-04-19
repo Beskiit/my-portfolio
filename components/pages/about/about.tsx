@@ -13,7 +13,7 @@ import Node from "@/components/icons/node";
 
 export default function about() {
   return (
-    <section className="flex flex-col items-center gap-4 text-black">
+    <section id="about" className="flex flex-col items-center gap-4 text-black">
       <h1 className="text-3xl font-semibold">Airone Gamil</h1>
       <span className="text-center text-[0.725rem] mt-2 w-3/4 text-gray-600">
         I create modern, scalable web applications that help turn ideas into

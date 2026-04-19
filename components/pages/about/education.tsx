@@ -10,7 +10,7 @@ import Java from "@/components/icons/java";
 
 export default function education() {
   return (
-    <section className="text-black">
+    <section id="education" className="text-black">
       <div className="flex justify-center items-center">
         <h1 className="text-2xl font-semibold mt-4">Education</h1>
       </div>
