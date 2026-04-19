@@ -17,8 +17,7 @@ export default function Hero() {
         alt="Profile Picture"
         width={200}
         height={200}
-        style={{ width: "200", height: "200" }}
-        className="mb-4"
+        className="mb-4 w-32 h-32 md:w-52 md:h-52 lg:w-52 lg:h-52"
         loading="eager"
       />
       <h1 className="text-2xl font-bold mb-2 text-black">
@@ -63,10 +62,18 @@ export default function Hero() {
         <span className="flex flex-row text-sm text-black gap-2">
           Follow me:
           <span className="flex flex-row gap-2">
-            <a href="" className="hover:underline">
+            <a
+              href="https://github.com/Beskiit"
+              target="_blank"
+              className="hover:underline"
+            >
               <Github />
             </a>
-            <a href="" className="hover:underline">
+            <a
+              href="https://www.linkedin.com/in/airone-gamil-313882274"
+              target="_blank"
+              className="hover:underline"
+            >
               <Linkedin />
             </a>
           </span>

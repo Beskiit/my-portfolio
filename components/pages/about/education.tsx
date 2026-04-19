@@ -42,7 +42,7 @@ export default function education() {
       </div>
 
       <div className="flex flex-col justify-center items-center mt-5">
-        <h1 className="text-2xl font-semibold mt-4">TECH STACK</h1>\
+        <h1 className="text-2xl font-semibold mt-4">TECH STACK</h1>
         <div className="flex flex-col gap-4 my-10">
           <div className="flex flex-row gap-10">
             <Js />
