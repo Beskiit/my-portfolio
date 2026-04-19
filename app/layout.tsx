@@ -3,6 +3,19 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
 import "./globals.css";
+import { Antonio, Anek_Tamil } from "next/font/google";
+
+const antonio = Antonio({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-antonio",
+});
+
+const anekTamil = Anek_Tamil({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-anek-tamil",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +40,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${antonio.variable} ${anekTamil.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
