@@ -56,9 +56,14 @@ export default function Hero() {
               <Arrow />
               Contact Me
             </button>
-            <button className="flex flex-row justify-center items-center gap-2 bg-white text-black px-4 py-2 rounded-2xl border-2 border-black">
-              <Download /> Download CV
-            </button>
+            <a
+              href="/resume.pdf"
+              download="Airone_Gamil_Resume.pdf"
+              className="flex flex-row justify-center items-center gap-4 border border-black text-black px-4 py-2 rounded-2xl cursor-pointer"
+            >
+              <Download />
+              Download CV
+            </a>
           </div>
           <hr className="w-11/12 border-2 border-gray-300 rounded-lg my-10" />
           <div className="flex justify-start items-center w-full">
