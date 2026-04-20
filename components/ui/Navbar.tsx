@@ -10,7 +10,7 @@ export default function Navbar() {
       className={`fixed top-0 w-full z-50 bg-white ${isOpen ? "h-full" : "h-auto"}`}
     >
       <div className="flex flex-row justify-between px-4 py-2">
-        <p></p>
+        <p className="md:hidden"></p>
         <span className="font-bold text-lg text-black">AIRONE GAMIL</span>
         <button
           type="button"
