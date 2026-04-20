@@ -1,19 +1,16 @@
 import React from "react";
+import Marquee from "react-fast-marquee";
 import Image from "next/image";
-import Js from "@/components/icons/js";
 import ReactIcon from "@/components/icons/react";
-import Node from "@/components/icons/node";
 import Python from "@/components/icons/python";
 import Tailwind from "@/components/icons/tailwind";
-import Sql from "@/components/icons/sql";
-import Csharp from "@/components/icons/csharp";
-import Java from "@/components/icons/java";
 import Frontend from "@/components/icons/frontend";
 import Ui from "@/components/icons/ui";
 import Backend from "@/components/icons/backend";
 import Responsive from "@/components/icons/responsive";
 import Database from "@/components/icons/database";
 import Rocket from "@/components/icons/rocket";
+import { SiNextdotjs, SiSupabase, SiMysql } from "react-icons/si";
 
 export default function education() {
   return (
@@ -123,19 +120,65 @@ export default function education() {
 
       <div className="flex flex-col justify-center items-center mt-5">
         <h1 className="text-2xl font-semibold mt-4">TECH STACK</h1>
-        <div className="flex flex-col gap-4 my-10">
-          <div className="flex flex-row gap-10">
-            <Js />
-            <Java />
-            <Python />
-            <Tailwind />
-            <ReactIcon />
-          </div>
-          <div className="flex flex-row gap-10 justify-center">
-            <Csharp />
-            <Node />
-            <Sql />
-          </div>
+        <div className="w-full my-10">
+          <Marquee speed={50} gradient={false} pauseOnHover={true}>
+            <div className="flex flex-row items-center gap-20 px-5">
+              <Image
+                src="/js.svg"
+                alt="JavaScript"
+                width={48}
+                height={48}
+                className="md:w-10 md:h-10 lg:w-12 lg:h-12"
+              />
+              <Image
+                src="/java.svg"
+                alt="Java"
+                width={48}
+                height={48}
+                className="md:w-10 md:h-10 lg:w-12 lg:h-12"
+              />
+              <Image
+                src="/python.svg"
+                alt="Python"
+                width={48}
+                height={48}
+                className="md:w-10 md:h-10 lg:w-12 lg:h-12"
+              />
+              <Tailwind className="md:w-10 md:h-10 lg:w-12 lg:h-12" />
+              <ReactIcon className="md:w-10 md:h-10 lg:w-12 lg:h-12" />
+              <Image
+                src="/csharp.svg"
+                alt="C#"
+                width={48}
+                height={48}
+                className="md:w-10 md:h-10 lg:w-12 lg:h-12"
+              />
+              <SiMysql className="text-blue-600 w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14" />
+              <Image
+                src="/laravel.svg"
+                alt="Laravel"
+                width={48}
+                height={48}
+                className="md:w-10 md:h-10 lg:w-12 lg:h-12"
+              />
+              <SiNextdotjs className="text-black w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14" />
+              <SiSupabase className="text-green-500 w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14" />
+              <Image
+                src="/github.svg"
+                alt="GitHub"
+                width={48}
+                height={48}
+                className="md:w-10 md:h-10 lg:w-12 lg:h-12"
+              />
+              <Image
+                src="/figma.svg"
+                alt="Figma"
+                width={48}
+                height={48}
+                className="md:w-10 md:h-10 lg:w-12 lg:h-12"
+              />
+            </div>
+          </Marquee>
         </div>
       </div>
     </section>
