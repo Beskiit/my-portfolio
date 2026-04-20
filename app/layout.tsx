@@ -41,13 +41,15 @@ export const metadata: Metadata = {
     "Next.js",
     "Laravel",
   ],
-  authors: [{ name: "Airone Gamil", url: "https://aironegamil.com" }],
+  authors: [
+    { name: "Airone Gamil", url: "https://airone-portfolio.vercel.app/" },
+  ],
   creator: "Airone Gamil",
   openGraph: {
     title: "Airone Gamil | Software Developer",
     description:
       "Full-stack developer based in Bulacan, Philippines. Building modern, scalable web applications.",
-    url: "https://aironegamil.com",
+    url: "https://airone-portfolio.vercel.app/",
     siteName: "Airone Gamil Portfolio",
     locale: "en_US",
     type: "website",
