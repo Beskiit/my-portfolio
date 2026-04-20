@@ -9,8 +9,10 @@ export default function Footer() {
     <footer className="flex flex-col items-center justify-center gap-2 p-4 text-center text-sm text-black">
       <div className="md:flex md:justify-between md:w-full md:px-10">
         <div className="md:flex md:flex-col md:gap-4">
-          <h1 className="text-2xl font-semibold">Airone Gamil</h1>
-          <div className="flex flex-row gap-4 md:flex-col">
+          <div className="my-2">
+            <h1 className="text-2xl font-semibold">Airone Gamil</h1>
+          </div>
+          <div className="flex mb-2 flex-row justify-center gap-4 md:flex-col">
             <a href="" className="md:flex md: items-center md:gap-3.5">
               <Facebook />
               <span className="hidden md:block hover:underline">Facebook</span>

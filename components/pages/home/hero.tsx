@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Location from "@/components/icons/location";
 import Mail from "@/components/icons/mail";
 import Arrow from "@/components/icons/arrow";
@@ -52,10 +53,13 @@ export default function Hero() {
             </div>
           </div>
           <div className="flex flex-row gap-4 items-center justify-center mt-10 lg:gap-10">
-            <button className="flex flex-row justify-center items-center gap-2 bg-black text-white px-4 py-2 rounded-2xl">
+            <Link
+              href="/contact"
+              className="flex flex-row justify-center items-center gap-2 bg-black text-white px-4 py-2 rounded-2xl"
+            >
               <Arrow />
               Contact Me
-            </button>
+            </Link>
             <a
               href="/resume.pdf"
               download="Airone_Gamil_Resume.pdf"
