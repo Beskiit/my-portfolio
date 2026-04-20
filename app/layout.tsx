@@ -61,6 +61,9 @@ export const metadata: Metadata = {
       "Full-stack developer based in Bulacan, Philippines. Building modern, scalable web applications.",
     creator: "@aironegamil",
   },
+  verification: {
+    google: "google-site-verification: google991453b26896b44a.html",
+  },
 };
 
 export default function RootLayout({
