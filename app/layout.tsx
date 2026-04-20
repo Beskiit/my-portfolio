@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     creator: "@aironegamil",
   },
   verification: {
-    google: "google-site-verification: google991453b26896b44a.html",
+    google: "google991453b26896b44a",
   },
 };
 
