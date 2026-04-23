@@ -1,9 +1,19 @@
 "use client";
 import React from "react";
-import { Link } from "react-scroll";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import { Link as ScrollLink } from "react-scroll";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const navigateToSection = (sectionId: string) => {
+    setIsOpen(false);
+    if (pathname === "/") return;
+    router.push(`/#${sectionId}`);
+  };
 
   return (
     <nav
@@ -22,45 +32,46 @@ export default function Navbar() {
 
         <ul className="hidden md:flex gap-6">
           <li>
-            <Link
+            <ScrollLink
               to="hero"
               smooth={true}
               duration={500}
               offset={-80}
               className="cursor-pointer"
+              onClick={() => navigateToSection("hero")}
             >
               Home
-            </Link>
+            </ScrollLink>
           </li>
           <li>
-            <Link
+            <ScrollLink
               to="about"
               smooth={true}
               duration={500}
               offset={-80}
               className="cursor-pointer"
+              onClick={() => navigateToSection("about")}
             >
               About
-            </Link>
+            </ScrollLink>
           </li>
           <li>
-            <Link
+            <ScrollLink
               to="projects"
               smooth={true}
               duration={500}
               offset={-80}
               className="cursor-pointer"
+              onClick={() => navigateToSection("projects")}
             >
               Projects
-            </Link>
+            </ScrollLink>
           </li>
           <li>
             <Link
-              to="contact"
-              smooth={true}
-              duration={500}
-              offset={-80}
+              href="/contact"
               className="cursor-pointer"
+              onClick={() => setIsOpen(false)}
             >
               Contact
             </Link>
@@ -71,48 +82,45 @@ export default function Navbar() {
       {isOpen && (
         <ul className="md:hidden flex flex-col justify-center items-center gap-4 h-full">
           <li>
-            <Link
+            <ScrollLink
               to="hero"
               smooth={true}
               duration={500}
               offset={-80}
               className="cursor-pointer text-black"
-              onClick={() => setIsOpen(false)}
+              onClick={() => navigateToSection("hero")}
             >
               Home
-            </Link>
+            </ScrollLink>
           </li>
           <li>
-            <Link
+            <ScrollLink
               to="about"
               smooth={true}
               duration={500}
               offset={-80}
               className="cursor-pointer text-black"
-              onClick={() => setIsOpen(false)}
+              onClick={() => navigateToSection("about")}
             >
               About
-            </Link>
+            </ScrollLink>
           </li>
           <li>
-            <Link
+            <ScrollLink
               to="projects"
               smooth={true}
               duration={500}
               offset={-80}
               className="cursor-pointer text-black"
-              onClick={() => setIsOpen(false)}
+              onClick={() => navigateToSection("projects")}
             >
               Projects
-            </Link>
+            </ScrollLink>
           </li>
           <li>
             <Link
-              to="contact"
-              smooth={true}
-              duration={500}
-              offset={-80}
-              className="cursor-pointer text-black"
+              href="/contact"
+              className="cursor-pointer"
               onClick={() => setIsOpen(false)}
             >
               Contact
