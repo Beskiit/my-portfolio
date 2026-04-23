@@ -1,12 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import Location from "@/components/icons/location";
 import Mail from "@/components/icons/mail";
 import Arrow from "@/components/icons/arrow";
 import Download from "@/components/icons/download";
 import Github from "@/components/icons/github";
 import Linkedin from "@/components/icons/linkedin";
-import AvatarNodeMap from "@/components/ui/AvatarNodeMap";
+
+const AvatarNodeMap = dynamic(() => import("@/components/ui/AvatarNodeMap"), {
+  ssr: false,
+});
 
 export default function Hero() {
   return (
