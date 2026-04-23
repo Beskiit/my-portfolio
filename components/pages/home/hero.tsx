@@ -6,20 +6,14 @@ import Arrow from "@/components/icons/arrow";
 import Download from "@/components/icons/download";
 import Github from "@/components/icons/github";
 import Linkedin from "@/components/icons/linkedin";
+import AvatarNodeMap from "@/components/ui/AvatarNodeMap";
 
 export default function Hero() {
   return (
     <section id="hero" className="flex flex-col items-center mt-20 gap-2 px-4">
-      <div className="flex flex-col items-center lg:flex-row-reverse lg:justify-center lg:w-full lg:px-10 gap-10">
-        <div className="">
-          <Image
-            src="/images/picture.png"
-            alt="Profile Picture"
-            width={200}
-            height={200}
-            className="mb-4 w-32 h-32 md:w-52 md:h-52 lg:w-160 lg:h-160 lg:rounded-2xl"
-            loading="eager"
-          />
+      <div className="flex flex-col items-center lg:flex-row-reverse lg:justify-center lg:w-full lg:px-10 gap-20">
+        <div className="flex items-center justify-center lg:h-150 lg:w-150">
+          <AvatarNodeMap />
         </div>
         <div className="text-center lg:text-start lg:flex lg:flex-col lg:gap-10">
           <div className="">
@@ -38,7 +32,7 @@ export default function Hero() {
           <div className="flex flex-row justify-center items-center gap-2 mt-2 lg:gap-4">
             <div className="flex flex-row gap-1 items-center lg:gap-4">
               <Location className="md:h-6 md:w-6" />
-              <span className="text-[0.725rem] font-semibold text-black md:text-sm">
+              <span className="text-[0.725rem] font-semibold text-black md:text-sm md:text-nowrap">
                 Based in Bulacan, Philippines
               </span>
             </div>
@@ -99,8 +93,7 @@ export default function Hero() {
         alt="Profile Picture"
         width={200}
         height={200}
-        style={{ width: "100%", height: "200" }}
-        className="mt-4"
+        className="mt-4 w-full lg:h-36"
         loading="eager"
       />
     </section>
