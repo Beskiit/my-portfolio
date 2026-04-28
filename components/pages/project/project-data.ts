@@ -58,4 +58,18 @@ export const projects: PortfolioProject[] = [
       { src: "/images/clms4.png", label: "Settings" },
     ],
   },
+  {
+    slug: "task-management-system",
+    title: "Task Management",
+    desc: "A full-stack web application that can assign a specific task to a person and can track the progress of the project. You can add a different scrum master based on the project members and also the project manager. It can also notify when there is a new task for the member or a nearest due task through the email notification. It also has a notepad specifically for the user only.",
+    tags: ["Laravel", "Livewire", "DaisyUI", "MySQL", "C#"],
+    service: "Frontend Development, Backend System, Deployment",
+    focus: "Task Assignment, Progress Tracking, role-based access",
+    images: [
+      { src: "/images/task1.png", label: "Dashboard" },
+      { src: "/images/task2.png", label: "Calendar" },
+      { src: "/images/Task3.png", label: "Projects" },
+      { src: "/images/Task4.png", label: "Tasks" },
+    ],
+  },
 ];
