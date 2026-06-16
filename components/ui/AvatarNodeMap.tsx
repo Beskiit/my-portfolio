@@ -10,6 +10,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 const SKILLS = [
   {
     label: "TypeScript",
+    desc: "My primary language for building type-safe React and Next.js apps. I rely on it daily to catch bugs early and keep large codebases maintainable.",
     angle: 0,
     distRatio: 0.86,
     bg: "#EEF0FE",
@@ -20,6 +21,7 @@ const SKILLS = [
   },
   {
     label: "React",
+    desc: "I build component-driven UIs with hooks, context, and modern patterns — from interactive dashboards to this very portfolio.",
     angle: 30,
     distRatio: 0.9,
     bg: "#E1F5EE",
@@ -30,6 +32,7 @@ const SKILLS = [
   },
   {
     label: "Next.js",
+    desc: "My go-to framework for production apps. I use the App Router, server components, and API routes to ship fast, SEO-friendly sites.",
     angle: 60,
     distRatio: 0.86,
     bg: "#F1EFE8",
@@ -40,6 +43,7 @@ const SKILLS = [
   },
   {
     label: "UI / UX",
+    desc: "I design clean, user-centered interfaces with a focus on clarity, accessibility, and smooth, intentional interactions.",
     angle: 90,
     distRatio: 0.9,
     bg: "#FAEEDA",
@@ -50,6 +54,7 @@ const SKILLS = [
   },
   {
     label: "Framer",
+    desc: "I use Framer Motion to add fluid animations and micro-interactions that make interfaces feel alive and responsive.",
     angle: 120,
     distRatio: 0.86,
     bg: "#FBEAF0",
@@ -60,6 +65,7 @@ const SKILLS = [
   },
   {
     label: "Figma",
+    desc: "I prototype and design layouts in Figma before translating them into pixel-perfect, responsive code.",
     angle: 150,
     distRatio: 0.9,
     bg: "#FAECE7",
@@ -70,6 +76,7 @@ const SKILLS = [
   },
   {
     label: "Node.js",
+    desc: "I build REST APIs and backend services with Node — handling authentication, data flow, and business logic.",
     angle: 180,
     distRatio: 0.86,
     bg: "#EAF3DE",
@@ -80,6 +87,7 @@ const SKILLS = [
   },
   {
     label: "Laravel",
+    desc: "I've built full-featured web apps with Laravel — MVC architecture, Eloquent ORM, and Blade templating.",
     angle: 210,
     distRatio: 0.9,
     bg: "#FCEBEB",
@@ -90,6 +98,7 @@ const SKILLS = [
   },
   {
     label: "C# / .NET",
+    desc: "I develop desktop and web applications with C# and .NET, applying OOP principles and clean architecture.",
     angle: 240,
     distRatio: 0.86,
     bg: "#EEEDFE",
@@ -100,6 +109,7 @@ const SKILLS = [
   },
   {
     label: "Java",
+    desc: "I learned core programming and OOP fundamentals with Java, building console and desktop applications.",
     angle: 270,
     distRatio: 0.9,
     bg: "#FAECE7",
@@ -110,6 +120,7 @@ const SKILLS = [
   },
   {
     label: "SQL",
+    desc: "I design relational schemas and write optimized queries across MySQL and PostgreSQL databases.",
     angle: 300,
     distRatio: 0.86,
     bg: "#E6F1FB",
@@ -120,6 +131,7 @@ const SKILLS = [
   },
   {
     label: "Supabase",
+    desc: "I use Supabase for auth, realtime data, and Postgres-backed backends — powering apps without managing servers.",
     angle: 330,
     distRatio: 0.9,
     bg: "#E1F5EE",
@@ -381,6 +393,69 @@ export default function AvatarNodeMap() {
           style={{ transition: "stroke 0.3s" }}
         />
       </svg>
+
+      {/* description bubble for the hovered skill */}
+      {active !== null &&
+        (() => {
+          const skill = SKILLS[active];
+          const dist = (size / 2) * skill.distRatio;
+          const pos = polar(skill.angle, dist);
+          const x = C + pos.x;
+          const y = C + pos.y;
+          const onLeft = pos.x < 0;
+          const tipW = Math.max(180, Math.min(230, size * 0.6));
+          const gap = 14;
+
+          return (
+            <div
+              key={active}
+              style={{
+                position: "absolute",
+                top: y,
+                left: onLeft ? x - gap : x + gap,
+                width: tipW,
+                transform: `translate(${onLeft ? "-100%" : "0"}, -50%)`,
+                background: "#fff",
+                border: `1px solid ${skill.border}`,
+                borderTop: `3px solid ${skill.activeBg}`,
+                borderRadius: 12,
+                padding: "10px 13px",
+                boxShadow: "0 8px 24px rgba(0,0,0,0.12)",
+                zIndex: 20,
+                pointerEvents: "none",
+                fontFamily: "inherit",
+                animation: "ng-tip-in 0.18s ease-out",
+              }}
+            >
+              <div
+                style={{
+                  fontSize: 13,
+                  fontWeight: 700,
+                  color: skill.activeBg,
+                  marginBottom: 4,
+                }}
+              >
+                {skill.label}
+              </div>
+              <div
+                style={{
+                  fontSize: 11.5,
+                  lineHeight: 1.5,
+                  color: "#374151",
+                }}
+              >
+                {skill.desc}
+              </div>
+            </div>
+          );
+        })()}
+
+      <style>{`
+        @keyframes ng-tip-in {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+      `}</style>
     </div>
   );
 }

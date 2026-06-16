@@ -19,9 +19,13 @@ export default function about() {
           solutions that support your goals and grow with your business.
         </span>
 
-        <button className="flex flex-row items-center justify-center gap-4 border-2 mt-4 border-black rounded-2xl px-4 py-2">
+        <a
+          href="/resume.pdf"
+          download="Airone_Gamil_Resume.pdf"
+          className="flex flex-row items-center justify-center gap-4 border-2 mt-4 border-black rounded-2xl px-4 py-2 cursor-pointer"
+        >
           <Download /> Download CV
-        </button>
+        </a>
       </div>
 
       <div className="flex flex-row gap-4 mt-4">

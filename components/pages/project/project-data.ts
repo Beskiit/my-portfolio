@@ -11,9 +11,26 @@ export type PortfolioProject = {
   service: string;
   focus: string;
   images: ProjectImage[];
+  liveUrl?: string;
+  repoUrl?: string;
 };
 
 export const projects: PortfolioProject[] = [
+  {
+    slug: "crm-email-system",
+    title: "CRM System",
+    desc: "A full-stack CRM and bulk email platform that lets teams compose and send emails to many recipients at once, with file attachments and per-recipient delivery tracking. It includes a complete mailbox experience — inbox, drafts, and archive — a leads dashboard, and a proposal builder that exports polished proposals to PDF. Reports and records can also be exported to Excel or PDF, with real-time sending progress and role-based access for admins and team members.",
+    tags: ["Laravel", "Livewire", "Alpine.js", "Tailwind CSS", "MySQL"],
+    service: "Full-Stack Development, Email Automation, PDF / Excel Export",
+    focus: "Bulk emailing, lead tracking, proposal generation, role-based access",
+    liveUrl: "https://crm.odeccisolutions.com/",
+    images: [
+      { src: "/images/crm1.png", label: "Dashboard" },
+      { src: "/images/crm2.png", label: "Compose Email" },
+      { src: "/images/crm3.png", label: "Inbox" },
+      { src: "/images/crm4.png", label: "Proposal Builder" },
+    ],
+  },
   {
     slug: "terms-system",
     title: "TeRMS System",
@@ -65,6 +82,8 @@ export const projects: PortfolioProject[] = [
     tags: ["Laravel", "Livewire", "DaisyUI", "MySQL", "C#"],
     service: "Frontend Development, Backend System, Deployment",
     focus: "Task Assignment, Progress Tracking, role-based access",
+    liveUrl:
+      "http://ec2-52-77-117-213.ap-southeast-1.compute.amazonaws.com:1014/",
     images: [
       { src: "/images/task1.png", label: "Dashboard" },
       { src: "/images/task2.png", label: "Calendar" },
